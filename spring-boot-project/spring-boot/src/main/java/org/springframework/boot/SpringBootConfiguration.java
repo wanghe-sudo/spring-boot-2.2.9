@@ -43,6 +43,7 @@ import org.springframework.core.annotation.AliasFor;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
+// spring的注解,被@Configuration标注的类,将变成一个配置类,可以被组件扫描器扫描到
 @Configuration
 public @interface SpringBootConfiguration {
 

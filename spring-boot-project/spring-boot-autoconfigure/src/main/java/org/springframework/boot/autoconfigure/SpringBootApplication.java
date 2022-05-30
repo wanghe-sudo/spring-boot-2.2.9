@@ -45,11 +45,19 @@ import org.springframework.data.repository.Repository;
  * @author Andy Wilkinson
  * @since 1.2.0
  */
+// 注解试用范围,Type表示注解可以作用在类,接口,注解或者枚举上
 @Target(ElementType.TYPE)
+// 表示注解的生命周期,在运行时
 @Retention(RetentionPolicy.RUNTIME)
+// 表示注解可以记录在javadoc中
 @Documented
+// 表示可以被子类集成该注解
 @Inherited
+//  ====上面是元注解====
+
+// 表示该类是一个配置类
 @SpringBootConfiguration
+//
 @EnableAutoConfiguration
 @ComponentScan(excludeFilters = { @Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),
 		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })
